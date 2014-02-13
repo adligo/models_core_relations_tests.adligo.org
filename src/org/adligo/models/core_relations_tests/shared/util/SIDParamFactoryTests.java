@@ -1,10 +1,10 @@
-package org.adligo.models.core_tests.relations.client.util;
+package org.adligo.models.core_relations_tests.shared.util;
 
-import org.adligo.models.core.relations.shared.util.SIDParamFactory;
 import org.adligo.models.core.shared.ids.LongIdentifier;
 import org.adligo.models.core.shared.ids.StringIdentifier;
 import org.adligo.models.core.shared.ids.VersionedLongIdentifier;
 import org.adligo.models.core.shared.ids.VersionedLongIdentifierMutant;
+import org.adligo.models.core_relations.shared.util.SIDParamFactory;
 import org.adligo.models.params.shared.I_Operators;
 import org.adligo.models.params.shared.I_TemplateParams;
 import org.adligo.models.params.shared.ParamsFactory;

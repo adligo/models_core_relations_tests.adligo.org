@@ -1,4 +1,4 @@
-package org.adligo.models.core_tests.relations.client.util;
+package org.adligo.models.core_relations_tests.shared.util;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.List;
 
 import org.adligo.i.util.shared.DateTime;
-import org.adligo.models.core.relations.shared.util.DateRangeParamsFactory;
 import org.adligo.models.core.shared.util.DateRangeMutant;
+import org.adligo.models.core_relations.shared.util.DateRangeParamsFactory;
 import org.adligo.models.params.shared.I_Operators;
 import org.adligo.models.params.shared.I_TemplateParams;
 import org.adligo.models.params.shared.Params;

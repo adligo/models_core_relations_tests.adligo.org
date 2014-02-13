@@ -1,8 +1,8 @@
-package org.adligo.models.core_tests.relations;
+package org.adligo.models.core_relations_tests.shared;
 
-import org.adligo.models.core.relations.shared.EMail;
 import org.adligo.models.core.shared.ModelsCoreRegistry;
-import org.adligo.models.core_tests.shared.assertions.EMailAssertions;
+import org.adligo.models.core_relations.shared.EMail;
+import org.adligo.models.core_relations_tests.shared.assertions.EMailAssertions;
 import org.adligo.tests.ATest;
 import org.adligo.xml_io_tests.shared.IsXmlIoSerializable;
 

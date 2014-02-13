@@ -1,8 +1,8 @@
-package org.adligo.models.core_tests.relations;
+package org.adligo.models.core_relations_tests.shared;
 
-import org.adligo.models.core.relations.shared.UserRelations;
 import org.adligo.models.core.shared.ModelsCoreRegistry;
-import org.adligo.models.core_tests.shared.assertions.UserRelationsAssertions;
+import org.adligo.models.core_relations.shared.UserRelations;
+import org.adligo.models.core_relations_tests.shared.assertions.UserRelationsAssertions;
 import org.adligo.tests.ATest;
 import org.adligo.xml_io_tests.shared.IsXmlIoSerializable;
 

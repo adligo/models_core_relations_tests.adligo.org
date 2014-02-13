@@ -1,9 +1,8 @@
-package org.adligo.models.core_tests.shared.assertions;
+package org.adligo.models.core_relations_tests.shared.assertions;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.adligo.models.core.relations.shared.UserRelationsMutant;
 import org.adligo.models.core.shared.DomainName;
 import org.adligo.models.core.shared.EMailAddress;
 import org.adligo.models.core.shared.InvalidParameterException;
@@ -12,6 +11,8 @@ import org.adligo.models.core.shared.OrganizationMutant;
 import org.adligo.models.core.shared.PersonMutant;
 import org.adligo.models.core.shared.UserMutant;
 import org.adligo.models.core.shared.ids.LongIdentifier;
+import org.adligo.models.core_relations.shared.UserRelationsMutant;
+import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
 import org.adligo.tests.I_Test;
 
 public class UserRelationsAssertions {
