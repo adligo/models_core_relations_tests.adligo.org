@@ -4,12 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.adligo.models.core.shared.EMailAddress;
+import org.adligo.models.core.shared.I_StorageIdentifier;
 import org.adligo.models.core.shared.InvalidParameterException;
 import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
-import org.adligo.models.core.shared.ids.I_StorageIdentifier;
-import org.adligo.models.core.shared.ids.StringIdentifier;
 import org.adligo.models.core_relations.shared.EMail;
 import org.adligo.models.core_relations.shared.EMailMutant;
+import org.adligo.models.core_relations.shared.ids.StringIdentifier;
 import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
 import org.adligo.tests.I_Test;
 

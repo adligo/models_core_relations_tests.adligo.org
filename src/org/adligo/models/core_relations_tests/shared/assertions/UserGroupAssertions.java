@@ -6,9 +6,9 @@ import java.util.Set;
 import org.adligo.models.core.shared.InvalidParameterException;
 import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
 import org.adligo.models.core.shared.OrganizationMutant;
-import org.adligo.models.core.shared.ids.LongIdentifier;
 import org.adligo.models.core_relations.shared.UserGroup;
 import org.adligo.models.core_relations.shared.UserGroupMutant;
+import org.adligo.models.core_relations.shared.ids.LongIdentifier;
 import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
 import org.adligo.tests.I_Test;
 

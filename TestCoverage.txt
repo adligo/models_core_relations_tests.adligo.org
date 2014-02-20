@@ -2,3 +2,7 @@ Date,Package,Coverage,Instructions
 2/12/2014,org.adligo.models.core_relations.shared,43.8%,1905
 2/12/2014,org.adligo.models.core_relations.shared.util,50.1%,611
 2/12/2014,org.adligo.models.core_relations.shared.i18n,0.0%,31
+2/19/2014,org.adligo.models.core_relations.shared,43.8%,1905
+2/19/2014,org.adligo.models.core_relations.shared.util,50.1%,611
+2/19/2014,org.adligo.models.core_relations.shared.ids,36.8%,519
+2/19/2014,org.adligo.models.core_relations.shared.i18n,0.0%,31

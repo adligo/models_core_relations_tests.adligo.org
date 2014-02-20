@@ -10,8 +10,8 @@ import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
 import org.adligo.models.core.shared.OrganizationMutant;
 import org.adligo.models.core.shared.PersonMutant;
 import org.adligo.models.core.shared.UserMutant;
-import org.adligo.models.core.shared.ids.LongIdentifier;
 import org.adligo.models.core_relations.shared.UserRelationsMutant;
+import org.adligo.models.core_relations.shared.ids.LongIdentifier;
 import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
 import org.adligo.tests.I_Test;
 
