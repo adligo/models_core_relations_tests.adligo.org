@@ -3,8 +3,13 @@ package org.adligo.models.core_relations_tests.shared.ids.assertions;
 import java.util.Iterator;
 import java.util.TreeSet;
 
+import org.adligo.models.core.shared.I_Changeable;
 import org.adligo.models.core.shared.InvalidParameterException;
+import org.adligo.models.core.shared.OrganizationMutant;
+import org.adligo.models.core_relations.shared.ids.I_VersionedLongIdentifier;
+import org.adligo.models.core_relations.shared.ids.LongIdentifier;
 import org.adligo.models.core_relations.shared.ids.LongIdentifierMutant;
+import org.adligo.models.core_relations.shared.ids.StringIdentifier;
 import org.adligo.models.core_relations.shared.ids.StringIdentifierMutant;
 import org.adligo.models.core_relations.shared.ids.VersionedLongIdentifier;
 import org.adligo.models.core_relations.shared.ids.VersionedLongIdentifierMutant;
@@ -22,13 +27,78 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		InvalidParameterException x;
 		x = null;
 		try {
-			new VersionedLongIdentifier(null);
+			new VersionedLongIdentifier((I_VersionedLongIdentifier) null);
 		} catch (InvalidParameterException g) {
 			x = g;
 		}
 		assertNotNull(x);
 		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
 		assertEquals(VersionedLongIdentifierMutant.DOES_NOT_ACCEPT_NULLS, x.getMessage());
+		
+		x = null;
+		try {
+			new VersionedLongIdentifier((I_Changeable) null);
+		} catch (InvalidParameterException g) {
+			x = g;
+		}
+		assertNotNull(x);
+		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
+		assertEquals(VersionedLongIdentifierMutant.DOES_NOT_ACCEPT_NULLS, x.getMessage());
+		
+		x = null;
+		try {
+			OrganizationMutant om = new OrganizationMutant();
+			new VersionedLongIdentifier(om);
+		} catch (InvalidParameterException g) {
+			x = g;
+		}
+		assertNotNull(x);
+		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
+		assertEquals(VersionedLongIdentifierMutant.DOES_NOT_ACCEPT_NULLS, x.getMessage());
+		
+		x = null;
+		try {
+			OrganizationMutant om = new OrganizationMutant();
+			om.setId(new StringIdentifier("abc"));
+			new VersionedLongIdentifier(om);
+		} catch (InvalidParameterException g) {
+			x = g;
+		}
+		assertNotNull(x);
+		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
+		assertEquals("The I_Changeable's id must be a I_LongIdentifier for this constructor.", x.getMessage());
+		
+		x = null;
+		try {
+			MockChangeable om = new MockChangeable();
+			om.setId(new LongIdentifier());
+			new VersionedLongIdentifier(om);
+		} catch (InvalidParameterException g) {
+			x = g;
+		}
+		assertNotNull(x);
+		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
+		assertEquals(VersionedLongIdentifierMutant.DOES_NOT_ACCEPT_NULLS, x.getMessage());
+		
+		
+		x = null;
+		try {
+			MockChangeable om = new MockChangeable();
+			om.setId(new LongIdentifier(1L));
+			new VersionedLongIdentifier(om);
+		} catch (InvalidParameterException g) {
+			x = g;
+		}
+		assertNotNull(x);
+		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
+		assertEquals(VersionedLongIdentifierMutant.DOES_NOT_ACCEPT_NULLS, x.getMessage());
+		
+		OrganizationMutant om = new OrganizationMutant();
+		om.setId(new LongIdentifier(123L));
+		om.setVersion(321);
+		VersionedLongIdentifier vid = new VersionedLongIdentifier(om);
+		assertEquals(123L, vid.getId());
+		assertEquals(321, vid.getVersion());
 		
 		VersionedLongIdentifier vli = new VersionedLongIdentifier();
 		assertEquals(961, vli.hashCode());
