@@ -47,7 +47,7 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		
 		x = null;
 		try {
-			OrganizationMutant om = new OrganizationMutant();
+			VersionedMock om = new VersionedMock();
 			new VersionedLongIdentifier(om);
 		} catch (InvalidParameterException g) {
 			x = g;
@@ -58,7 +58,7 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		
 		x = null;
 		try {
-			OrganizationMutant om = new OrganizationMutant();
+			VersionedMock om = new VersionedMock();
 			om.setId(new StringIdentifier("abc"));
 			new VersionedLongIdentifier(om);
 		} catch (InvalidParameterException g) {
@@ -70,7 +70,7 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		
 		x = null;
 		try {
-			MockChangeable om = new MockChangeable();
+			VersionedMock om = new VersionedMock();
 			om.setId(new LongIdentifier());
 			new VersionedLongIdentifier(om);
 		} catch (InvalidParameterException g) {
@@ -83,7 +83,7 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		
 		x = null;
 		try {
-			MockChangeable om = new MockChangeable();
+			VersionedMock om = new VersionedMock();
 			om.setId(new LongIdentifier(1L));
 			new VersionedLongIdentifier(om);
 		} catch (InvalidParameterException g) {
@@ -93,7 +93,7 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		assertEquals(VersionedLongIdentifierMutant.CONSTRUCTOR, x.getMethodName());
 		assertEquals(VersionedLongIdentifierMutant.DOES_NOT_ACCEPT_NULLS, x.getMessage());
 		
-		OrganizationMutant om = new OrganizationMutant();
+		VersionedMock om = new VersionedMock();
 		om.setId(new LongIdentifier(123L));
 		om.setVersion(321);
 		VersionedLongIdentifier vid = new VersionedLongIdentifier(om);

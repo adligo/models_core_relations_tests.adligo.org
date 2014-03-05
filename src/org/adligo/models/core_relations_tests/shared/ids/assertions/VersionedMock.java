@@ -5,7 +5,7 @@ import org.adligo.models.core.shared.I_StorageIdentifier;
 import org.adligo.models.core.shared.I_StorageInfo;
 import org.adligo.models.core.shared.ValidationException;
 
-public class MockChangeable implements I_Changeable {
+public class VersionedMock implements I_Changeable {
 	private I_StorageIdentifier id;
 	private Integer version;
 	private I_StorageInfo storageInfo;
