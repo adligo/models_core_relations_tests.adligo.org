@@ -11,9 +11,9 @@ import org.adligo.models.core.shared.OrganizationMutant;
 import org.adligo.models.core.shared.PersonMutant;
 import org.adligo.models.core.shared.UserMutant;
 import org.adligo.models.core_relations.shared.UserRelationsMutant;
-import org.adligo.models.core_relations.shared.ids.LongIdentifier;
+import org.adligo.models.core_relations.shared.ids.LongIdentifierMutant;
 import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
-import org.adligo.tests.I_Test;
+import org.adligo.tests.shared.I_Test;
 
 public class UserRelationsAssertions {
 
@@ -188,7 +188,7 @@ public class UserRelationsAssertions {
 		test.assertIsTrue(ur.getGroups().contains("somegroup"));
 		OrganizationMutant orgMutant = new OrganizationMutant();
 		orgMutant.setName("admins");
-		orgMutant.setType(new LongIdentifier(321L));
+		orgMutant.setType(new LongIdentifierMutant(321L));
 		
 		mutant.setOrg(orgMutant);
 		

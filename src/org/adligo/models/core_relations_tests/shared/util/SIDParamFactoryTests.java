@@ -1,7 +1,7 @@
 package org.adligo.models.core_relations_tests.shared.util;
 
-import org.adligo.models.core_relations.shared.ids.LongIdentifier;
-import org.adligo.models.core_relations.shared.ids.StringIdentifier;
+import org.adligo.models.core_relations.shared.ids.LongIdentifierMutant;
+import org.adligo.models.core_relations.shared.ids.StringIdentifierMutant;
 import org.adligo.models.core_relations.shared.ids.VersionedLongIdentifier;
 import org.adligo.models.core_relations.shared.ids.VersionedLongIdentifierMutant;
 import org.adligo.models.core_relations.shared.util.SIDParamFactory;
@@ -15,7 +15,7 @@ public class SIDParamFactoryTests extends ATest {
 
 	
 	public void testLongIdentifier() throws Exception {
-		I_TemplateParams params =  SIDParamFactory.byId(new LongIdentifier(123L));
+		I_TemplateParams params =  SIDParamFactory.byId(new LongIdentifierMutant(123L));
 		assertTrue(params.getNextParam(ParamsFactory.DEFAULT));
 		assertTrue(params.getNextParam(ParamsFactory.WHERE));
 		
@@ -31,7 +31,7 @@ public class SIDParamFactoryTests extends ATest {
 	}
 	
 	public void testStringIdentifier() throws Exception {
-		I_TemplateParams params =  SIDParamFactory.byId(new StringIdentifier("123L"));
+		I_TemplateParams params =  SIDParamFactory.byId(new StringIdentifierMutant("123L"));
 		assertTrue(params.getNextParam(ParamsFactory.DEFAULT));
 		assertTrue(params.getNextParam(ParamsFactory.WHERE));
 		

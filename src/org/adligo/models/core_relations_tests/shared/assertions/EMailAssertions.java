@@ -9,9 +9,9 @@ import org.adligo.models.core.shared.InvalidParameterException;
 import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
 import org.adligo.models.core_relations.shared.EMail;
 import org.adligo.models.core_relations.shared.EMailMutant;
-import org.adligo.models.core_relations.shared.ids.StringIdentifier;
+import org.adligo.models.core_relations.shared.ids.StringIdentifierMutant;
 import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
-import org.adligo.tests.I_Test;
+import org.adligo.tests.shared.I_Test;
 
 public class EMailAssertions {
 
@@ -79,7 +79,7 @@ public class EMailAssertions {
 		
 		x = null;
 		try {
-			mutant.addAttachment(new StringIdentifier());
+			mutant.addAttachment(new StringIdentifierMutant());
 		} catch (Exception g) {
 			x = IPEExceptionAsserter.isIPE(g, test);
 		}
@@ -100,7 +100,7 @@ public class EMailAssertions {
 		test.assertIsEquals(pre + ModelsCoreEnglishConstants.EMAIL_ATTACHEMNT_MAY_NOT_BE_NULL, x.getMessage());
 		
 		set.clear();
-		set.add(new StringIdentifier());
+		set.add(new StringIdentifierMutant());
 		
 		try {
 			mutant.setAttachments(set);
@@ -323,22 +323,22 @@ public class EMailAssertions {
 		test.assertIsEquals(0, bccs.size());
 		
 		//attachments
-		test.assertIsTrue(mutant.addAttachment(new StringIdentifier("some_file")));
+		test.assertIsTrue(mutant.addAttachment(new StringIdentifierMutant("some_file")));
 		Set<I_StorageIdentifier> attachments = mutant.getAttachments();
 		test.assertIsEquals(1, attachments.size());
-		test.assertIsTrue(attachments.contains(new StringIdentifier("some_file")));
-		test.assertIsTrue(mutant.removeAttachment(new StringIdentifier("some_file")));
+		test.assertIsTrue(attachments.contains(new StringIdentifierMutant("some_file")));
+		test.assertIsTrue(mutant.removeAttachment(new StringIdentifierMutant("some_file")));
 		attachments = mutant.getAttachments();
 		test.assertIsEquals(0, attachments.size());
 		
 		Set<I_StorageIdentifier> newAttachemnts = new HashSet<I_StorageIdentifier>();
-		test.assertIsTrue(newAttachemnts.add(new StringIdentifier("file1")));
-		test.assertIsTrue(newAttachemnts.add(new StringIdentifier("file2")));
+		test.assertIsTrue(newAttachemnts.add(new StringIdentifierMutant("file1")));
+		test.assertIsTrue(newAttachemnts.add(new StringIdentifierMutant("file2")));
 		test.assertIsTrue(mutant.setAttachments(newAttachemnts));
 		attachments = mutant.getAttachments();
 		test.assertIsEquals(2, attachments.size());
-		test.assertIsTrue(attachments.contains(new StringIdentifier("file1")));
-		test.assertIsTrue(attachments.contains(new StringIdentifier("file2")));
+		test.assertIsTrue(attachments.contains(new StringIdentifierMutant("file1")));
+		test.assertIsTrue(attachments.contains(new StringIdentifierMutant("file2")));
 		test.assertIsTrue(mutant.removeAllAttachments(newAttachemnts));
 		attachments = mutant.getAttachments();
 		test.assertIsEquals(0, attachments.size());
@@ -353,7 +353,7 @@ public class EMailAssertions {
 		test.assertIsTrue(mutant.addTo(new EMailAddress("to@adligo.com")));
 		test.assertIsTrue(mutant.addCcAddresses(new EMailAddress("cc@adligo.com")));
 		test.assertIsTrue(mutant.addBcc(new EMailAddress("bcc@adligo.com")));
-		test.assertIsTrue(mutant.addAttachment(new StringIdentifier("some_file")));
+		test.assertIsTrue(mutant.addAttachment(new StringIdentifierMutant("some_file")));
 		
 		EMail email = new EMail(mutant);
 		test.assertIsEquals(new EMailAddress("support@adligo.com"), email.getFrom());
@@ -374,6 +374,6 @@ public class EMailAssertions {
 		
 		Set<I_StorageIdentifier> attachments = mutant.getAttachments();
 		test.assertIsEquals(1, attachments.size());
-		test.assertIsTrue(attachments.contains(new StringIdentifier("some_file")));
+		test.assertIsTrue(attachments.contains(new StringIdentifierMutant("some_file")));
 	}
 }

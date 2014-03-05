@@ -8,9 +8,9 @@ import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
 import org.adligo.models.core.shared.OrganizationMutant;
 import org.adligo.models.core_relations.shared.UserGroup;
 import org.adligo.models.core_relations.shared.UserGroupMutant;
-import org.adligo.models.core_relations.shared.ids.LongIdentifier;
+import org.adligo.models.core_relations.shared.ids.LongIdentifierMutant;
 import org.adligo.models.core_tests.shared.assertions.IPEExceptionAsserter;
-import org.adligo.tests.I_Test;
+import org.adligo.tests.shared.I_Test;
 
 public class UserGroupAssertions {
 
@@ -111,7 +111,7 @@ public class UserGroupAssertions {
 		OrganizationMutant org = new OrganizationMutant();
 		org.setName("funPeople");
 		
-		org.setType(new LongIdentifier(321L));
+		org.setType(new LongIdentifierMutant(321L));
 		mutant.setOrg(org);		
 		new UserGroup(mutant);
 
