@@ -3,7 +3,7 @@ package org.adligo.models.core_relations_tests.shared.ids.assertions;
 import java.util.Iterator;
 import java.util.TreeSet;
 
-import org.adligo.models.core.shared.I_Changeable;
+import org.adligo.models.core.shared.I_Versioned;
 import org.adligo.models.core.shared.InvalidParameterException;
 import org.adligo.models.core.shared.OrganizationMutant;
 import org.adligo.models.core_relations.shared.ids.I_VersionedLongIdentifier;
@@ -37,7 +37,7 @@ public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 		
 		x = null;
 		try {
-			new VersionedLongIdentifier((I_Changeable) null);
+			new VersionedLongIdentifier((I_Versioned) null);
 		} catch (InvalidParameterException g) {
 			x = g;
 		}

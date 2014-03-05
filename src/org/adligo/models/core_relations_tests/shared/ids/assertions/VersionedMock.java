@@ -1,11 +1,11 @@
 package org.adligo.models.core_relations_tests.shared.ids.assertions;
 
-import org.adligo.models.core.shared.I_Changeable;
+import org.adligo.models.core.shared.I_Versioned;
 import org.adligo.models.core.shared.I_StorageIdentifier;
 import org.adligo.models.core.shared.I_StorageInfo;
 import org.adligo.models.core.shared.ValidationException;
 
-public class VersionedMock implements I_Changeable {
+public class VersionedMock implements I_Versioned {
 	private I_StorageIdentifier id;
 	private Integer version;
 	private I_StorageInfo storageInfo;
