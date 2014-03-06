@@ -5,7 +5,7 @@ import java.util.Set;
 
 import org.adligo.models.core.shared.InvalidParameterException;
 import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
-import org.adligo.models.core.shared.OrganizationMutant;
+import org.adligo.models.core.shared.OrgMutant;
 import org.adligo.models.core_relations.shared.UserGroup;
 import org.adligo.models.core_relations.shared.UserGroupMutant;
 import org.adligo.models.core_relations.shared.ids.LongIdentifierMutant;
@@ -108,7 +108,7 @@ public class UserGroupAssertions {
 				prefix + ModelsCoreEnglishConstants.ORG_EMPTY_NAME,
 				ex.getMessage());
 		
-		OrganizationMutant org = new OrganizationMutant();
+		OrgMutant org = new OrgMutant();
 		org.setName("funPeople");
 		
 		org.setType(new LongIdentifierMutant(321L));

@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 import org.adligo.models.core.shared.I_Versioned;
 import org.adligo.models.core.shared.InvalidParameterException;
-import org.adligo.models.core.shared.OrganizationMutant;
+import org.adligo.models.core.shared.OrgMutant;
 import org.adligo.models.core_relations.shared.ids.I_VersionedLongIdentifier;
 import org.adligo.models.core_relations.shared.ids.LongIdentifier;
 import org.adligo.models.core_relations.shared.ids.LongIdentifierMutant;

@@ -7,7 +7,7 @@ import org.adligo.models.core.shared.DomainName;
 import org.adligo.models.core.shared.EMailAddress;
 import org.adligo.models.core.shared.InvalidParameterException;
 import org.adligo.models.core.shared.ModelsCoreEnglishConstants;
-import org.adligo.models.core.shared.OrganizationMutant;
+import org.adligo.models.core.shared.OrgMutant;
 import org.adligo.models.core.shared.PersonMutant;
 import org.adligo.models.core.shared.UserMutant;
 import org.adligo.models.core_relations.shared.UserRelationsMutant;
@@ -186,7 +186,7 @@ public class UserRelationsAssertions {
 		test.assertIsEquals("123", ur.getPassword());
 		
 		test.assertIsTrue(ur.getGroups().contains("somegroup"));
-		OrganizationMutant orgMutant = new OrganizationMutant();
+		OrgMutant orgMutant = new OrgMutant();
 		orgMutant.setName("admins");
 		orgMutant.setType(new LongIdentifierMutant(321L));
 		
