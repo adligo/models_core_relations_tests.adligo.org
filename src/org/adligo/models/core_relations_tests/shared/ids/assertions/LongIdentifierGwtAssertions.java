@@ -11,10 +11,6 @@ import org.adligo.tests.shared.AAssertions;
 
 public class LongIdentifierGwtAssertions extends AAssertions {
 
-	@Override
-	public String getPackage() {
-		return StringIdentifierMutant.class.getPackage().getName();
-	}
 
 	public void constructorsAsserts() throws Exception {
 		

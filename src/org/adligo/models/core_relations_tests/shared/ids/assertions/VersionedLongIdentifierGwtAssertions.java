@@ -17,11 +17,6 @@ import org.adligo.tests.shared.AAssertions;
 
 public class VersionedLongIdentifierGwtAssertions extends AAssertions {
 
-	@Override
-	public String getPackage() {
-		return StringIdentifierMutant.class.getPackage().getName();
-	}
-
 	public void constructorsAsserts() throws Exception {
 		
 		InvalidParameterException x;

@@ -3,15 +3,12 @@ package org.adligo.models.core_relations_tests.ids;
 import org.adligo.models.core_relations_tests.ids.assertions.LongIdentifierAssertions;
 import org.adligo.models.core_relations_tests.shared.ids.assertions.LongIdentifierGwtAssertions;
 import org.adligo.tests.ATest;
-import org.adligo.tests.shared.AssertionStats;
-import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class LongIdentifierTests extends ATest {
-	private static AssertionStats stats = new AssertionStats();
 	private static LongIdentifierAssertions assertions = new LongIdentifierAssertions();
 	private static LongIdentifierGwtAssertions gwtAssertions = new LongIdentifierGwtAssertions();
 	
@@ -19,13 +16,7 @@ public class LongIdentifierTests extends ATest {
 		assertions.setTest(this);
 		gwtAssertions.setTest(this);
 	}
-	
-	@AfterClass
-	public static void afterClass() {
-		stats.logAssertionStats(LongIdentifierTests.class, 
-				assertions, 
-				gwtAssertions);
-	}
+
 	
 	@Test
 	public void testStorageIdentifierConstructors() throws Exception {

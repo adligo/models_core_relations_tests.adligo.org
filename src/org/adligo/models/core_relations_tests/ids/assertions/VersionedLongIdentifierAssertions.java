@@ -7,11 +7,6 @@ import org.adligo.xml_io_tests.shared.IsXmlIoSerializable;
 
 public class VersionedLongIdentifierAssertions extends AAssertions {
 
-	@Override
-	public String getPackage() {
-		return StringIdentifierMutant.class.getPackage().getName();
-	}
-
 	public void isSeralizableAsserts() throws IllegalStateException {
 		assertTrue(IsXmlIoSerializable.isXmlIoSerializable(VersionedLongIdentifierMutant.class));
 	}
