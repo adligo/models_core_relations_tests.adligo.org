@@ -1,10 +1,10 @@
-/bin
-bin/
-classes/
-classes_e/
-war/
-gwt-unitCache/
+/bin/
+/build/
+/classes/
+/classes_e/
+/war/
+/gwt-unitCache/
 test_failure.properties
-test_reports/
+/test_reports/
 models_core_relations_tests*.jar
 
