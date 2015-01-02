@@ -14,5 +14,8 @@
         <lns:project>models_core.adligo.org</lns:project>
         <lns:project>models_core_relations.adligo.org</lns:project>
         <lns:project>params.adligo.org</lns:project>
+        <lns:project>tests.adligo.org</lns:project>
+        <lns:project>xml_io.adligo.org</lns:project>
+        <lns:project>xml_io_tests.adligo.org</lns:project>
     </lns:dependencies>
  </tns:fabricate_project>

@@ -8,7 +8,7 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/models_core.adligo.org"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/models_core_relations.adligo.org"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/params.adligo.org"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tests.adligo.org"/>
 	<classpathentry kind="var" path="MVN_REPO/org/apache/geronimo/specs/geronimo-ejb_3.1_spec/1.0/geronimo-ejb_3.1_spec-1.0.jar"/>
 	<classpathentry kind="var" path="MVN_REPO/org/apache/geronimo/specs/geronimo-jpa_2.0_spec/1.0/geronimo-jpa_2.0_spec-1.0.jar"/>
 	<classpathentry kind="var" path="MVN_REPO/com/google/gwt/gwt-user/2.5.0/gwt-user-2.5.0.jar"/>
